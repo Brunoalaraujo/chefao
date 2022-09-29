@@ -1,14 +1,18 @@
-import { BrowserRouter, Routes as Wapper, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage/Index'
+import { Routes as WapperRoute, Route, BrowserRouter } from 'react-router-dom';
+import LoginPage from './pages/LoginPage/index';
+import DashboardPage from './pages/DashboardPage'
 
 
-export default function Routes() {
+export default function Routes(): JSX.Element  {
     return (
         <BrowserRouter>
-            <Wapper>
+            <WapperRoute>
                 <Route path="/" element={<LoginPage />} />
-            </Wapper>
+                <Route path="/view" element={<DashboardPage />} />
+            </WapperRoute>
         </BrowserRouter>
         
     );
+    
 }
+

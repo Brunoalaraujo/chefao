@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { signInUser } from '../../services/User';
 import { logIn } from '../../store/users';
 
-import yup from 'yup';
+
+//import yup from 'yup';
 
 import * as LG from './style';
 import logo from '../../assets/Logo_Colaí.jpg';
@@ -15,10 +16,10 @@ const FormLogin: React.FC = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const schema = yup.object({
-        email: yup.string().email('E-mail não é válido').required('Campo E-mail é obrigatório'),
-        password: yup.string().required('Campo Senha é obrigatório').min(6, 'Senha deve ter pelo menos 6 caracteres.')
-    })
+    // const schema = yup.object({
+    //     email: yup.string().email('E-mail não é válido').required('Campo E-mail é obrigatório'),
+    //     password: yup.string().required('Campo Senha é obrigatório').min(6, 'Senha deve ter pelo menos 6 caracteres.')
+    //})
 
     return (
         <Formik initialValues={{
@@ -64,6 +65,9 @@ const FormLogin: React.FC = () => {
                         <LG.StyledButton size='sm' type='submit'>entrar</LG.StyledButton>
                         <LG.SignUpLink>
                             <a href='/'>cadastre-se</a>
+                        </LG.SignUpLink>
+                        <LG.SignUpLink>
+                            <a href='/'>Esqueceu sua senha?</a>
                         </LG.SignUpLink>
                     </LG.LoginForm>
                 </LG.Container>

@@ -6,16 +6,19 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    
     height: 100vh;
     img {
+        width: 90%;
         align-self: center;
     }
     h1 {
+        color: #ab4be0;
         text-transform: uppercase;
     }
     @media (min-width: 460px) {
         h1 {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-bottom:  2.3rem;
         }
     }
@@ -27,12 +30,12 @@ export const LoginForm = styled(Form)`
     align-items: center;
     width: 30.438rem;
     max-width: 31rem;
-    background-color: #FFF;
-    border: 1px solid #C5C5C5;
+    background-color: #3a0323;
+    filter: drop-shadow(0 0 0.75rem white);
 `
 
-export const LoginFormGroup = styled(Form.Group)`
-    width: 71%;
+export const LoginFormGroup = styled(Form.Group)`   
+    
     padding: 0.17rem;
     @media (min-width: 460px) { 
         padding-bottom: 0.8rem;
@@ -40,11 +43,12 @@ export const LoginFormGroup = styled(Form.Group)`
 `
 
 export const LoginFormInput = styled(Form.Control)`
-    border: 1px solid #909090;
+    border: 1px solid #faebf4;
     border-radius: 12px;
+    
     &::placeholder {
         text-align:center;
-        font-size: 1.0rem;
+        font-size: 1.3rem;
     }
     @media (min-width: 460px) {
         &::placeholder {
@@ -57,11 +61,11 @@ export const StyledButton = styled(Button)`
         z-index: 1;
         position: relative;
         border: none;
-        background-color: #76BB4C;
+        background-color: #22bef8;
         width: 69%;
         font-size: 1.1rem;
         color: #000;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.30));
         border-radius: 12px;
         margin: 0.3rem 0;
         &:after {
@@ -72,7 +76,7 @@ export const StyledButton = styled(Button)`
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.30);
             border-radius: 12px;
             transform: scaleX(0);
             transform-origin: right;
@@ -80,15 +84,15 @@ export const StyledButton = styled(Button)`
         }
         
         &:hover {
-            background-color: #76BB4C;
-            color: #FFF;
+            background-color: #ab4be0;
+            color: #faebf4;
         }
         &:hover::after {
             transform: scaleX(1);
             transform-origin: left;
         }
         &:focus {
-            background-color: #76BB4C;
+            background-color: #ab4be0;
         }
         @media (min-width: 460px) {
             font-size: 1.5rem;
@@ -101,14 +105,14 @@ export const StyledErrorMessage = styled.div`
 `
 
 export const SignUpLink = styled.div`
-        margin: 2.1rem 0;
+        margin: 1.1rem 0;
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     a {
         text-decoration: none;
-        color: #555555;
+        color: #ab4be0;
     }
     a:hover {
-        color: #76BB4C;
+        color: #22bef8;
     }
 `
