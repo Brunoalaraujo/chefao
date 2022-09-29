@@ -15,6 +15,13 @@ export interface User extends logar {
     id: number;
     nome: string;
     permission: Permission;
+    estado: string,
+    cidade: string,
+    endereco: string,
+    numero: string,
+    cep: string,
+    bairro: string,
+    complemento: string,
 }
 
 export enum Permission {
@@ -30,6 +37,8 @@ export interface UserState {
     id?: number;
     nome?: string;
     email?: string;
+    cidade: string,
+    estado: string
     
     
 }

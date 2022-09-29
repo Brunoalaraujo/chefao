@@ -1,8 +1,11 @@
 import React from "react";
+import NavbarColai from "../Header";
 
 const DashboardViews: React.FC = () => {
     return (
-        <h1>Dashboard</h1>   
+        <>
+            <NavbarColai />
+        </>
     );
 };
 
