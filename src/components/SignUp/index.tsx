@@ -7,7 +7,7 @@ export const SignUp = () => {
     return(
         <C.Wrapper>
             <C.Container>
-                
+                <C.Title>Dados de Acesso</C.Title>
                 <C.SignUpForm>
                     <Row>
                         <Col>
@@ -15,10 +15,12 @@ export const SignUp = () => {
                         <C.SignUpFormField placeholder="Crie seu nickname da plataforma"/>
                         <C.SignUpFormField placeholder="Crie sua senha"/>
                         <C.SignUpFormField placeholder="Confirme sua senha"/>
+                    
                         </Col>
-                        
-                        
+                        <C.StyledArrowRightO/>
+        
                     </Row>
+                    
 
                 </C.SignUpForm>
 
