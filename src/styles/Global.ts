@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
   :root{
     --destaqueRosa: #CF2CD9;
     --destaqueAzul: #00DAFF;
-    
+    --apoioBranco: #FCE8F5;
 
   }
 
