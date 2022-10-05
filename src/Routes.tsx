@@ -1,5 +1,5 @@
 import { Routes as WapperRoute, Route, BrowserRouter } from 'react-router-dom';
-import LoginPage from './pages/LoginPage/index';
+import LoginPage from './pages/LoginPage/Index';
 import DashboardPage from './pages/DashboardPage'
 import { LandingPage } from './components/LandingPage';
 import { SignUpPage } from './pages/SignUpPage';
