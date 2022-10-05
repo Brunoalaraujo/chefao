@@ -9,7 +9,7 @@ import { logIn } from '../../store/users';
 //import yup from 'yup';
 
 import * as LG from './style';
-import logo from '../../assets/Logo_Colaí.jpg';
+// import logo from '../../assets/Logo_Colaí.jpg';
 
 const FormLogin: React.FC = () => { 
 
@@ -34,7 +34,7 @@ const FormLogin: React.FC = () => {
             {({ handleSubmit, handleChange, values, touched, errors }) => (
                 <LG.Container>
                     <LG.LoginForm className='m-2' onSubmit={handleSubmit}>
-                        <img className='img-fluid' src={logo} />
+                        {/* <img className='img-fluid' src={logo} /> */}
                         <h1>Login</h1>
                         <LG.LoginFormGroup>
                             <LG.LoginFormInput
