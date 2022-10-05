@@ -13,9 +13,7 @@ text-align: center;
 margin: 0;
 padding: 0;
 height: 100vh;
- background: linear-gradient(360deg, #00ADCC,#00DAFF,#85EDFF);
-
-
+background-image: linear-gradient(to left bottom, #00adcc, #17b7d5, #25c1df, #30cbe8, #3ad5f2, #46dbf6, #50e0fb, #5ae6ff, #66e8ff, #71eaff, #7cebff, #85edff);
 
 `
 
