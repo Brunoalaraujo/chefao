@@ -1,6 +1,9 @@
 import { Routes as WapperRoute, Route, BrowserRouter } from 'react-router-dom';
 import LoginPage from './pages/LoginPage/index';
 import DashboardPage from './pages/DashboardPage'
+import { LandingPage } from './components/LandingPage';
+import { SignUpPage } from './pages/SignUpPage';
+
 
 
 export default function Routes(): JSX.Element  {
@@ -9,6 +12,7 @@ export default function Routes(): JSX.Element  {
             <WapperRoute>
                 <Route path="/" element={<LoginPage />} />
                 <Route path="/view" element={<DashboardPage />} />
+                <Route path="/signup" element={<SignUpPage/>}/>
             </WapperRoute>
         </BrowserRouter>
         
