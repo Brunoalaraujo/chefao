@@ -25,7 +25,6 @@ const GlobalStyle = createGlobalStyle`
     --apoioBranco: #FCE8F5;
 
   }
-
 `;
 
 export default GlobalStyle;
