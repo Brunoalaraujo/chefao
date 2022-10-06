@@ -34,13 +34,12 @@ width: 30rem;
 
 `
 export const SignUpFormField = styled(Form.Control)`
- border: 1px solid #85EDFF;
- color: #00ADCC;
+    border: 1px solid #85EDFF;
+    color: #00ADCC;
     border-radius: 15px;
     width: 15rem;
     padding: 7px;
     margin: 10px;
     background-color: #85EDFF;
-   
 
 `

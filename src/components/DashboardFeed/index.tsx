@@ -1,11 +1,15 @@
 import React from "react";
-import NavbarColai from "../Header";
+
+import * as LG from './styles';
 
 const DashboardViews: React.FC = () => {
     return (
-        <>
-            <NavbarColai />
-        </>
+        <LG.Container>
+            <LG.Title>FEED</LG.Title>
+            <LG.StyledButton >
+                <a href='/tour'>Iniciar Tour</a>
+            </LG.StyledButton>
+        </LG.Container>
     );
 };
 

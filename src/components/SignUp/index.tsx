@@ -16,8 +16,6 @@ export const SignUp = () => {
                         <C.SignUpFormField placeholder="Crie sua senha"/>
                         <C.SignUpFormField placeholder="Confirme sua senha"/>
                         </Col>
-                        
-                        
                     </Row>
 
                 </C.SignUpForm>
