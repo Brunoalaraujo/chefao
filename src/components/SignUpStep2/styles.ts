@@ -5,9 +5,9 @@ import Row from 'react-bootstrap/Row';
 
 
 export const Wrapper = styled.div`
-max-width:100%;
+width: 100%;
 display: flex;
-justify-content: center;
+justify-content: space-evenly;
 align-items: center;
 text-align: center;
 margin: 0;
@@ -17,6 +17,7 @@ height: 100vh;
 `
 
 export const Container = styled.div`
+
 align-items: center;
 max-width: 700px;
     min-height: 500px;
@@ -24,7 +25,9 @@ max-width: 700px;
 `
 
 export const SignUpForm = styled(Form)`
-margin-top: 100px;
+padding: 50px;
+padding-left: 18.75rem;
+margin-top: 20px;
 color: #008299;
 display: flex;
 justify-content: center;
@@ -34,23 +37,25 @@ font-family: 'Krub';
 
 `
 export const SignUpFormField = styled(Form.Control)`
-    border: 1px solid #64E5FB;
+    border: 0.1px solid #47E3FF;
     font-size: 13px;
     color:#008299;
-    border-radius: 20px;
-    width: 15rem;
-    
-    padding: 12px;
+    border-radius: 25px;
+    width:  ${props =>  props.width ? `${props.width}px` : '25rem'};
+    font-family: 'Krub';
+    padding: 16px;
     margin: 10px;
     background:#64E5FB;
     &::placeholder {
        color:#008299;
-        font-size: 13px;
+        font-size: 14px;
         font-family: 'Krub';
+        font-weight: 600;
     }
 `
 
 export const Title = styled.h1`
+
 font-family: 'Krub';
 font-style: normal;
 font-weight: 600;
@@ -100,4 +105,11 @@ export const StyledArrowRightO = styled.i`
     bottom: 8px;
     background: currentColor;
   }
+`
+
+export const AddPhoto = styled.img`
+display: flex;
+
+margin-left: -50px;
+
 `

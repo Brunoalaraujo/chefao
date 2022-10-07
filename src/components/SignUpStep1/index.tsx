@@ -3,7 +3,7 @@ import Row from 'react-bootstrap/Row';
 import * as C from './styles'
 
 
-export const SignUp = () => {
+export const SignUp1 = () => {
     return(
         <C.Wrapper>
             <C.Container>
@@ -12,7 +12,7 @@ export const SignUp = () => {
                     <Row>
                         <Col>
                         <C.SignUpFormField placeholder="Digite um e-mail válido"/>
-                        <C.SignUpFormField placeholder="Crie seu nickname da plataforma"/>
+                        <C.SignUpFormField placeholder="Crie seu nick da plataforma"/>
                         <C.SignUpFormField placeholder="Crie sua senha"/>
                         <C.SignUpFormField placeholder="Confirme sua senha"/>
                     
@@ -20,11 +20,8 @@ export const SignUp = () => {
                         <C.StyledArrowRightO/>
         
                     </Row>
-                    
-
-                </C.SignUpForm>
-
                 
+                </C.SignUpForm>
             </C.Container>
         </C.Wrapper>
     )
