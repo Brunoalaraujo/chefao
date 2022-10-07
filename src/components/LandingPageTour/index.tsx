@@ -1,26 +1,30 @@
-import React from 'react';
 
 import Onboarding3web from "../../assets/images/Onboarding3WebT.jpg";
-import * as LG from './styles'
+import Onboarding3webMobile from "../../assets/images/Onboarding3Mobile.png";
+import { Container, Aside, Title, StyledButton, SignupButton, SignUpLink  } from './styles'
 
 export const LandingPageTour = () => {
     return(
-        <LG.Container>
-            <div>
+        <Container>
+            <picture>
+                <source media="(max-width: 489px)" srcSet={ Onboarding3webMobile } />
                 <img src={Onboarding3web} />
-            </div>
-            <LG.Aside>
-                <LG.Title>Conheça as<br/> vantagens<br/> de colar com<br/> a gente</LG.Title>
-                <LG.StyledButton >
+            </picture>
+            <Aside>
+                <Title>Conheça as vantagens de colar com a gente</Title>
+
+                <StyledButton >
                     <a href='/tour'>Iniciar Tour</a>
-                </LG.StyledButton>
-                <LG.StyledButton >
+                </StyledButton>
+
+                <SignupButton>
                     <a href='/signup'>Quero me cadastrar</a>
-                </LG.StyledButton>
-                <LG.SignUpLink>
+                </SignupButton>
+                
+                <SignUpLink>
                     <a href='/'>Retornar para o Feed</a>
-                </LG.SignUpLink>
-            </LG.Aside>
-        </LG.Container>
+                </SignUpLink>
+            </Aside>            
+        </Container>
     )
 }
