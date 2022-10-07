@@ -25,6 +25,16 @@ const GlobalStyle = createGlobalStyle`
     --apoioBranco: #FCE8F5;
 
   }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Questrial','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Consolas, 'Courier New', monospace;
+}
 `;
 
 export default GlobalStyle;
