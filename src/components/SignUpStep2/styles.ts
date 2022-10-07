@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 export const Wrapper = styled.div`
 width: 100%;
 display: flex;
-justify-content: space-evenly;
+justify-content: center;
 align-items: center;
 text-align: center;
 margin: 0;
@@ -17,7 +17,8 @@ height: 100vh;
 `
 
 export const Container = styled.div`
-
+flex: 1;
+text-align: center;
 align-items: center;
 max-width: 700px;
     min-height: 500px;
@@ -55,16 +56,11 @@ export const SignUpFormField = styled(Form.Control)`
 `
 
 export const Title = styled.h1`
-
+margin-top: 20px;
 font-family: 'Krub';
 font-style: normal;
 font-weight: 600;
 font-size: 32px;
-display: flex;
-justify-content: center;
-align-items: center;
-
-
 color: #008299;
 `
 
@@ -108,8 +104,7 @@ export const StyledArrowRightO = styled.i`
 `
 
 export const AddPhoto = styled.img`
-display: flex;
 
-margin-left: -50px;
+
 
 `
