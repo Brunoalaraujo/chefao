@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import KrubFont from "./Fonts";
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   :root{
     --destaqueRosa: #CF2CD9;
     --destaqueAzul: #00DAFF;
@@ -9,12 +9,13 @@ export const GlobalStyle = createGlobalStyle`
     --textoCinza: #595959;
 
   }
-  ${KrubFont}
+  
   
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    ${KrubFont}
   }
 
   *::before,
@@ -33,3 +34,4 @@ code {
 }
 
 `;
+export default GlobalStyle;
