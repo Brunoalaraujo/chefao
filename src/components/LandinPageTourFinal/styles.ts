@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-
+import styled, { keyframes }  from 'styled-components';
 import { Button } from 'react-bootstrap';
+
+
 
 
 export const Container = styled.div`
@@ -19,6 +20,38 @@ export const Fundoimg = styled.img`
     transform: rotate(180deg);
 `;
 
+const rightMove = keyframes`
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-30px);
+        }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }   
+`;
+
+const leftMove = keyframes`
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(30px);
+        }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }   
+`;
+
 export const Title = styled.h1`
     z-index: 1;
     position: absolute;
@@ -33,9 +66,13 @@ export const Title = styled.h1`
     left: 13rem;
     top: 6.5rem;
 
+    animation: ${leftMove};
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+
     @media (max-width: 425px){
             font-size: 1.5rem;
-            top: 5.5rem;
+            top: 6.3rem;
             width: 17rem;
             height: auto;
             left: 40%
@@ -43,11 +80,11 @@ export const Title = styled.h1`
 `;
 
 export const SignupButton = styled(Button)`
-    z-index: 1;
+    z-index: 2;
     border: 1px solid #fff;
     position: absolute;
     background: transparent;
-    width: 22.5rem;
+    width: 20rem;
     font-weight: 600;
     font-size: 1.3rem;
     border-radius: 64px;
@@ -59,6 +96,9 @@ export const SignupButton = styled(Button)`
         text-decoration: none;
         color: #fff;
     }
+    animation: ${leftMove};
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
     &:after {
         content: '';
         z-index: -1;
@@ -75,6 +115,8 @@ export const SignupButton = styled(Button)`
     &:hover {
         text-decoration: none;
         cursor: pointer;
+        background-color:#000
+
     }
     &:hover::after {
         transform: scaleX(1);
@@ -104,8 +146,8 @@ export const Personagem = styled.img`
     background-size: cover;
 
     @media (max-width: 425px) {
-        
-        top: 17rem;
+            top: 14rem;
+            right: -14rem;
     };
     
 `;
@@ -117,12 +159,16 @@ export const Logo = styled.img`
     height: 154px;
     left: 62%;
     top: 8rem;
+    animation: ${rightMove};
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+
     @media (max-width: 425px){
-        height: 6rem;
-        width: 17rem;
-        justify-items: center;
-        top: 4rem;
-        left: 50%;
+            height: 6rem;
+            width: 17rem;
+            justify-items: center;
+            top: 8.5rem;
+            left: 35%;
     };   
 `;
 
@@ -143,6 +189,9 @@ export const StyledButton = styled(Button)`
         text-decoration: none;
         color: #CF2CD9;
     }
+    animation: ${rightMove};
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
     &:after {
         content: '';
         z-index: -1;
@@ -175,12 +224,15 @@ export const StyledButton = styled(Button)`
         margin: 0.4rem 0.6rem;
     };
     @media (max-width: 425px) {
-        width: 25%;
+        width: 60%;
         font-weight: 600;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         border-radius: 64px;
-        padding: 0.5rem; 
+        padding: 0.5rem;
         margin: 0rem 0.6rem;
+        top: 110%;
+        left: 35%;
     };
 `;
+
 
