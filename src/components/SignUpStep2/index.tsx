@@ -18,7 +18,7 @@ export const SignUp2 = () => {
                     <Row>
                         <Col>
                         <C.SignUpFormField placeholder="Nome completo"/>
-                        <C.SignUpFormField placeholder="CPF"/>
+                        
                         
                         <C.SignUpFormField width= {230}placeholder="Cidade"/>
                         <C.SignUpFormField width={150} placeholder="UF"/>
