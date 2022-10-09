@@ -17,12 +17,9 @@ export default function Routes(): JSX.Element  {
                 <Route path="/LandingPage" element={<LandingPage />} />
                 <Route path="/LandingPageFinal" element={<LandingPageFinal />} />
                 <Route path="/signup1" element={<SignUpPage1 />} />
-                <Route path="/signup2" element={<SignUpPage2/>}/>
-                <Route path="/tour" element={<TourPage/>}/>
+                <Route path="/signup2" element={<SignUpPage2 />} />
+                <Route path="/tour" element={<TourPage />} />
             </WapperRoute>
         </BrowserRouter>
-        
     );
-    
 }
-
