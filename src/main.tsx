@@ -10,3 +10,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <GlobalStyle />
   </React.StrictMode>
 )
+

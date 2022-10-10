@@ -7,8 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --destaqueAzul: #00DAFF;
     --apoioBranco: #FCE8F5;
     --textoCinza: #595959;
-
-  }
+  };
   
   
   * {
@@ -27,11 +26,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Questrial','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+  }
 
-code {
+  code {
     font-family: source-code-pro, Menlo, Consolas, 'Courier New', monospace;
-}
-
+  }
 `;
+
 export default GlobalStyle;
