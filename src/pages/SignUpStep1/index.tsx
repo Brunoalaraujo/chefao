@@ -1,5 +1,5 @@
 import React from "react";
-import { SignUp1 } from "../../components/SignUpStep1";
+import SignUp1  from "../../components/SignUpStep1";
 
 
 

@@ -5,13 +5,19 @@ import { Button } from 'react-bootstrap';
 
 
 export const Container = styled.div`
+    border: 1px solid red;
+    background: linear-gradient(to right, #cf2cd9, #867aff, #00a5ff, #00c3ff, #00daff);
     display: flex;
+    width: 100%;
+    height: 100vh;
     justify-content: space-evenly;
     align-items: center;
     
     @media (max-width: 425px){
         flex-direction: column;
         justify-content: center;
+        width: 100%;
+        height: 104vh;
         
     };
 `;
@@ -71,11 +77,12 @@ export const Title = styled.h1`
     animation-fill-mode: forwards;
 
     @media (max-width: 425px){
+            left: 40%;
             font-size: 1.5rem;
-            top: 6.3rem;
+            top: 3.3rem;
             width: 17rem;
             height: auto;
-            left: 40%
+            left: 20%;
     };
 `;
 
@@ -140,14 +147,24 @@ export const SignupButton = styled(Button)`
 export const Personagem = styled.img`
     z-index: 1;
     position: absolute;
-    height: 92vh;
-    top: 3rem;
+    height: auto;
+    width: 130vh;
+    
+    top: 2.9rem;
     left: 0 auto;
     background-size: cover;
 
     @media (max-width: 425px) {
-            top: 14rem;
-            right: -14rem;
+            top: 12rem;
+            height: 65%;
+            width: 87vh;
+            left: -3rem;
+    };
+    @media (max-width: 768px) {
+            top: 16rem;
+            height: 65%;
+            width: 87vh;
+            left: -7rem;
     };
     
 `;
@@ -166,9 +183,8 @@ export const Logo = styled.img`
     @media (max-width: 425px){
             height: 6rem;
             width: 17rem;
-            justify-items: center;
-            top: 8.5rem;
-            left: 35%;
+            top: 5.5rem;
+            left: 17%;
     };   
 `;
 
@@ -230,8 +246,8 @@ export const StyledButton = styled(Button)`
         border-radius: 64px;
         padding: 0.5rem;
         margin: 0rem 0.6rem;
-        top: 110%;
-        left: 35%;
+        top: 90%;
+        left: 18%
     };
 `;
 
