@@ -5,11 +5,9 @@ import LogoG5 from '../../assets/images/Group 5.png';
 import { Container, Title, Logo, Personagem, Fundoimg, StyledButton, SignupButton } from './styles';
 
 export const LandingPageTourFinal = () => {
-    return (
-        < >
-            
+    return (            
             <Container>
-                <Fundoimg src={BgDesktop}  />
+                {/* <Fundoimg src={BgDesktop}  /> */}
                 <Title>SEJA BEM-VINDO AO</Title>
                 <SignupButton>
                     <a href='/'>Já tenho cadastro</a>
@@ -24,6 +22,5 @@ export const LandingPageTourFinal = () => {
                     <a href='/signup'>Quero me cadastrar</a>
                 </StyledButton>
             </Container>
-        </>
     )
 }

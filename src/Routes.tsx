@@ -8,16 +8,16 @@ import { SignUpPage2 } from './pages/SignUpStep2';
 
 
 
-
-export default function Routes(): JSX.Element  {
+export default function Routes(): JSX.Element {
     return (
         <BrowserRouter>
             <WapperRoute>
                 <Route path="/" element={<Feed />} />
                 <Route path="/LandingPage" element={<LandingPage />} />
-                <Route path="/LandingPageFinal" element={<LandingPageFinal />} />
+                <Route path="/LandingPage/2" element={<LandingPageFinal />} />
                 <Route path="/signup1" element={<SignUpPage1 />} />
                 <Route path="/signup2" element={<SignUpPage2 />} />
+                
                 <Route path="/tour" element={<TourPage />} />
             </WapperRoute>
         </BrowserRouter>
