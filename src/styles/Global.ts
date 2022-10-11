@@ -2,7 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 
 const GlobalStyle = createGlobalStyle`
-  :root{
+  
+    :root{
     --destaqueRosa: #CF2CD9;
     --destaqueAzul: #00DAFF;
     --apoioBranco: #FCE8F5;
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Krub', sans-serif;
+    font-family: KrubFont;
   }
 
   *::before,

@@ -1,0 +1,43 @@
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 70%;
+  margin-top: 5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 50px;
+  color: #A520AC;
+  text-align: center;
+  background: 0 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.carousel-control-prev {
+  left: 68vw;
+}
+.carousel-control-prev .carousel-control-prev-icon {
+  background-image: url(../images/Icon-Prev.svg);
+}
+
+.carousel-control-next {
+  right: 20vw;
+}
+.carousel-control-next .carousel-control-next-icon {
+  background-image: url(../images/Icon-Next.svg);
+}
+
+.carousel-indicators {
+  height: 20px;
+  top: 20vh;
+  left: 48vw;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #A520AC;
+}/*# sourceMappingURL=tour.css.map */
