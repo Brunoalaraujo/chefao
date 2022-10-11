@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import KrubFont from "./Fonts";
+
 
 const GlobalStyle = createGlobalStyle`
   
@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     --destaqueRosa: #CF2CD9;
     --destaqueAzul: #00DAFF;
     --apoioBranco: #FCE8F5;
-    --textoCinza: #595959;
+    --textoCinza: #595959;    
   };
   
   

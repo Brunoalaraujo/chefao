@@ -1,29 +1,43 @@
-import styled, { keyframes }  from 'styled-components';
-import { Button } from 'react-bootstrap';
+import styled, { keyframes } from 'styled-components';
+// import { Button } from 'react-bootstrap';
 
 
-
-
-export const Container = styled.div`
-    border: 1px solid red;
+export const Fundoimg = styled.div`
     background: linear-gradient(to right, #cf2cd9, #867aff, #00a5ff, #00c3ff, #00daff);
     display: flex;
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    @media (max-width: 425px){
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 104vh;
+    justify-content: center;
+
+    @media (min-width: 769px){
+        flex-direction: row;
         
     };
-`;
+    @media (min-width: 1025px){
+        flex-direction: row;
+        
+    };
+    `;
 
-export const Fundoimg = styled.img`
-    transform: rotate(180deg);
+export const Container = styled.div`
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90vw;
+
+    @media (min-width: 769px){
+        flex-direction: row;
+    };
+    
+    @media (min-width: 1024px){
+        flex-direction: row;
+        max-width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        
+        
+    };
 `;
 
 const rightMove = keyframes`
@@ -60,194 +74,184 @@ const leftMove = keyframes`
 
 export const Title = styled.h1`
     z-index: 1;
-    position: absolute;
-    
-    color: #fff;
+    position: relative;
     font-style: normal;
-    font-weight: 700;
-    font-size: 3.5rem;
-
-    width: 22.5rem;
-    height: 9.6rem;
-    left: 13rem;
-    top: 6.5rem;
+    font-weight: 600;
+    color: #fff;
+    
+    font-size: 1.5rem;
+    top: 3.3rem;
+    width: 17rem;
+    height: auto;
+    left: 15%;
 
     animation: ${leftMove};
     animation-duration: 6s;
     animation-fill-mode: forwards;
 
-    @media (max-width: 425px){
-            left: 40%;
-            font-size: 1.5rem;
-            top: 3.3rem;
-            width: 17rem;
-            height: auto;
-            left: 20%;
+    @media (min-width: 768px){
+        font-size: 2.5rem;
+        top: 6.3rem;
+        width: 28rem;
+        height: auto;
+        left: 38%;
+    };
+
+    @media (min-width: 1024px){
+        width: 19.5rem;
+        height: 9.6rem;
+        top: 6.5rem;
+        left: -14rem;
     };
 `;
 
-export const SignupButton = styled(Button)`
+export const SignupButton = styled.button`
     z-index: 2;
     border: 1px solid #fff;
     position: absolute;
     background: transparent;
-    width: 20rem;
     font-weight: 600;
-    font-size: 1.3rem;
-    border-radius: 64px;
-    left: 13rem;
-    padding: 0.7rem 0; 
-    margin: 0;
-    top: 25rem;
+    display: none;
     a {
         text-decoration: none;
         color: #fff;
-    }
+        font-size: 1.2rem;
+    };
     animation: ${leftMove};
     animation-duration: 6s;
     animation-fill-mode: forwards;
-    &:after {
-        content: '';
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 64px;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in;
-    }
     
     &:hover {
-        text-decoration: none;
         cursor: pointer;
-        background-color:#000
+        text-decoration: none;
+        background-color:#ccc;
+        
 
-    }
-    &:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    &:focus {
-        background-color:#000 ;
-    }
-    @media (max-width: 768px) {
+    };
+    @media (min-width: 768px) {
+        display: inline;
         font-weight: 600;
         font-size: 1.2rem;
         border-radius: 64px;
-        padding: 0.8rem; 
-        margin: 0.1rem 0.6rem;
+        width: 20.5rem;
+        top: 65%;
+        padding: 0.8rem;
+        margin: 0.4rem 0.6rem;
+        left: 23rem;
     };
-    @media (max-width: 425px) {
-        display: none;
+    @media (min-width: 1024px) {
+        width: 20rem;
+        font-size: 1.3rem;
+        border-radius: 64px;
+        padding: 0.7rem 0; 
+        margin: 0;
+        top: 25rem;
+        left: 13rem;
     };
 `;
 
 export const Personagem = styled.img`
-    z-index: 1;
+    z-index: 0;
     position: absolute;
-    height: auto;
-    width: 130vh;
-    
-    top: 2.9rem;
-    left: 0 auto;
-    background-size: cover;
+    top: 9.2rem;
+    width: 100vw;
+    height: 73%;
+    left: 0rem;
 
-    @media (max-width: 425px) {
-            top: 12rem;
-            height: 65%;
-            width: 87vh;
-            left: -3rem;
+    @media (min-width: 768px) {
+        top: 16rem;
+        height: 65%;
+        width: 87vw;
+        left: -7rem;
     };
-    @media (max-width: 768px) {
-            top: 16rem;
-            height: 65%;
-            width: 87vh;
-            left: -7rem;
+
+    @media (min-width: 1025px) {
+        height: auto;
+        width: 130vh;
+        top: 2.9rem;
+        left: 17rem;
+        /* background-size: cover; */
     };
-    
 `;
 
 export const Logo = styled.img`
     z-index: 1;
-    position: absolute; 
-    width: 22.5rem;
-    height: 154px;
-    left: 62%;
-    top: 8rem;
+    position: absolute;
+    align-items: center;
+    left: 4rem;
+    height: 7rem;
+    width: 16rem;
+    top: 5rem;
+    
+
     animation: ${rightMove};
     animation-duration: 6s;
     animation-fill-mode: forwards;
 
-    @media (max-width: 425px){
-            height: 6rem;
-            width: 17rem;
-            top: 5.5rem;
-            left: 17%;
+    @media (min-width: 768px){
+        height: 11rem;
+        width: 24rem;
+        top: 9rem;
+        left: 39%;
+    };
+
+    @media (min-width: 1024px){
+        width: 22.5rem;
+        height: 154px;
+        left: 62%;
+        top: 8rem;
     };   
 `;
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled.button`
     z-index: 1;
     border: none;
     position: absolute;
     background-color: #fff;
-    width: 22.5rem;
     font-weight: 600;
-    font-size: 1.5rem;
     border-radius: 64px;
-    left: 62%;
-    padding: 0.7rem; 
-    margin: 0.6rem 0;
-    top: 24rem;
+
+    width: 60%;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-radius: 64px;
+    padding: 0.5rem;
+    margin: 0rem 0.6rem;
+    top: 85%;
+    left: 18%;
+    
     a {
         text-decoration: none;
         color: #CF2CD9;
-    }
+    };
     animation: ${rightMove};
     animation-duration: 6s;
     animation-fill-mode: forwards;
-    a::after {
-        content: '';
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        border-radius: 64px;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 300ms ease-in;
-    }
-    
+
     &:hover {
         cursor: pointer;
         text-decoration: none;
         background-color: #ccc;
         color: #fff;
-    }
-    &:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    &:focus {
-        background-color: #fff;
-    }
-    @media (max-width: 768px) {
-        font-weight: 600;
-        font-size: 1.2rem;
-        border-radius: 64px;
-        padding: 0.8rem; 
-        margin: 0.4rem 0.6rem;
     };
-    @media (max-width: 425px) {
-        width: 60%;
+    
+    @media (min-width: 768px) {
         font-weight: 600;
         font-size: 1.2rem;
         border-radius: 64px;
-        padding: 0.5rem;
-        margin: 0rem 0.6rem;
-        top: 90%;
-        left: 18%
+        width: 20.5rem;
+        top: 75%;
+        padding: 0.8rem;
+        margin: 0.4rem 0.6rem;
+        left: 23rem;
+    };
+    @media (min-width: 1024px) {
+        width: 22.5rem;
+        font-size: 1.5rem;
+        left: 62%;
+        padding: 0.7rem; 
+        margin: 0.6rem 0;
+        top: 24rem;
     };
 `;
 
