@@ -16,23 +16,29 @@
 }
 
 .carousel-control-prev {
-  left: 65%;
+  left: 68vw;
 }
 .carousel-control-prev .carousel-control-prev-icon {
   background-image: url(../images/Icon-Prev.svg);
 }
 
 .carousel-control-next {
-  right: 20%;
+  right: 20vw;
 }
 .carousel-control-next .carousel-control-next-icon {
   background-image: url(../images/Icon-Next.svg);
 }
 
+.carousel-indicators {
+  height: 20px;
+  top: 20vh;
+  left: 48vw;
+}
+
 .carousel-indicators [data-bs-target] {
-  margin-left: 60%;
   width: 10px;
   height: 10px;
+  border-radius: 50%;
   background-color: #A520AC;
 }
 

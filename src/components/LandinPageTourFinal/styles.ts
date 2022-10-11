@@ -208,7 +208,7 @@ export const StyledButton = styled(Button)`
     animation: ${rightMove};
     animation-duration: 6s;
     animation-fill-mode: forwards;
-    &:after {
+    a::after {
         content: '';
         z-index: -1;
         width: 100%;

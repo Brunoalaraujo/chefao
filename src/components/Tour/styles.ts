@@ -15,6 +15,15 @@ export const Caption = styled(Carousel.Caption)`
   left: 63%;
   color: #595959;
   text-align: start;
+  
+  img {
+    top: 11%;
+    right: 25%;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+  }
+
   h2 {
     font-weight: 400;
     font-size: 2.5rem;
@@ -25,4 +34,3 @@ export const Caption = styled(Carousel.Caption)`
   }
 `;
 
-const boxes = document.getElementsByClassName("box") as HTMLCollectionOf<HTMLElement>;
