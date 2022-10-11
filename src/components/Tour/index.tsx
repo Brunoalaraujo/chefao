@@ -10,7 +10,7 @@ import Onboarding7Web from "../../assets/images/Onboarding7Web.jpg";
 
 import * as C from "./styles";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../assets/sass/tour.css";
+import "../../assets/sass/tour.scss";
 
 export default function Tour(): JSX.Element {
   return (
