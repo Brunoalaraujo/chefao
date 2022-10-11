@@ -8,8 +8,8 @@ import { logIn } from '../../store/users';
 
 //import yup from 'yup';
 
-import * as LG from './style';
-// import logo from '../../assets/Logo_Colaí.jpg';
+import * as S from './style';
+import logo from '../../assets/images/Group 9.svg';
 
 const FormLogin: React.FC = () => { 
 
@@ -22,57 +22,58 @@ const FormLogin: React.FC = () => {
     //})
 
     return (
-        <Formik initialValues={{
-            email: '',
-            password: ''
-        }}
-            onSubmit={async values => {
-                const { accessToken, user } = await signInUser(values);
-                dispatch(logIn({ accessToken, permission: user.permission, user }));
-                navigate("/")
-            }}>          
-            {({ handleSubmit, handleChange, values, touched, errors }) => (
-                <LG.Container>
-                    <LG.LoginForm className='m-2' onSubmit={handleSubmit}>
-                        {/* <img className='img-fluid' src={logo} /> */}
-                        <h1>Login</h1>
-                        <LG.LoginFormGroup>
-                            <LG.LoginFormInput
-                                name='email'
-                                id='email'
-                                type='text'
-                                placeholder='email'
-                                value={values.email}
-                                onChange={handleChange}
-                                isValid={touched.email && !errors.email}
-                                isInvalid={touched.email && !!errors.email}
-                            />
-                            <ErrorMessage name='email' component={LG.StyledErrorMessage} />
-                        </LG.LoginFormGroup>
-                        <LG.LoginFormGroup>
-                            <LG.LoginFormInput
-                                name='password'
-                                id='senha'
-                                type='password'
-                                placeholder='senha'
-                                value={values.password}
-                                onChange={handleChange}
-                                isValid={touched.password && !errors.password}
-                                isInvalid={touched.password && !!errors.password}
-                            />
-                            <ErrorMessage name='password' component={LG.StyledErrorMessage} />
-                        </LG.LoginFormGroup>
-                        <LG.StyledButton size='sm' type='submit'>entrar</LG.StyledButton>
-                        <LG.SignUpLink>
-                            <a href='/'>cadastre-se</a>
-                        </LG.SignUpLink>
-                        <LG.SignUpLink>
-                            <a href='/'>Esqueceu sua senha?</a>
-                        </LG.SignUpLink>
-                    </LG.LoginForm>
-                </LG.Container>
-            )}
-        </Formik>    
+        <S.Container1>
+            <img className='img-fluid' src={logo} />
+            <Formik initialValues={{
+                email: '',
+                password: ''
+            }}
+                onSubmit={async values => {
+                    const { accessToken, user } = await signInUser(values);
+                    dispatch(logIn({ accessToken, permission: user.permission, user }));
+                    navigate("/")
+                }}>          
+                {({ handleSubmit, handleChange, values, touched, errors }) => (
+                    <S.Container>
+                            
+                        <S.LoginForm className='m-2' onSubmit={handleSubmit}>
+                            
+                            <S.LoginFormGroup>
+                                <S.LoginFormInput
+                                    name='email'
+                                    id='email'
+                                    type='text'
+                                    placeholder='email'
+                                    value={values.email}
+                                    onChange={handleChange}
+                                    isValid={touched.email && !errors.email}
+                                    isInvalid={touched.email && !!errors.email}
+                                />
+                                <ErrorMessage name='email' component={S.StyledErrorMessage} />
+                            </S.LoginFormGroup>
+                            <S.LoginFormGroup>
+                                <S.LoginFormInput
+                                    name='password'
+                                    id='senha'
+                                    type='password'
+                                    placeholder='senha'
+                                    value={values.password}
+                                    onChange={handleChange}
+                                    isValid={touched.password && !errors.password}
+                                    isInvalid={touched.password && !!errors.password}
+                                />
+                                <ErrorMessage name='password' component={S.StyledErrorMessage} />
+                            </S.LoginFormGroup>
+                            <S.StyledButton size='sm' type='submit'>Confirmar</S.StyledButton>
+                            <S.ButtonStyledTransparent size='sm' type='submit'>Criar minha conta</S.ButtonStyledTransparent>
+                            <S.SignUpLink>
+                                <a href='/'>Esqueci minha senha?</a>
+                            </S.SignUpLink>
+                        </S.LoginForm>
+                    </S.Container>
+                )}
+            </Formik>
+        </S.Container1>    
     );
 }
 
