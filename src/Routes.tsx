@@ -4,8 +4,8 @@ import Feed from './pages/Feed'
 import LandingPage from './pages/LandingPage';
 import LandingPageFinal from './pages/LandingPageFinal';
 import TourPage from './pages/TourPage'
-import { SignUpPage1 } from './pages/SignUpStep1';
-import { SignUpPage2 } from './pages/SignUpStep2';
+
+import { SignUpPage } from './pages/SignUpPage';
 
 
 
@@ -17,8 +17,8 @@ export default function Routes(): JSX.Element {
                 <Route path="/Feed" element={<Feed />} />
                 <Route path="/LandingPage" element={<LandingPage />} />
                 <Route path="/LandingPage/2" element={<LandingPageFinal />} />
-                <Route path="/signup1" element={<SignUpPage1 />} />
-                <Route path="/signup2" element={<SignUpPage2 />} />
+                <Route path="/signup" element={<SignUpPage />} />
+               
                 
                 <Route path="/tour" element={<TourPage />} />
             </WapperRoute>
