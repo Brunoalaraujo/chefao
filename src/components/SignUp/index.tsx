@@ -66,6 +66,7 @@ const dispatch = useDispatch();
                 
 
       <Col>
+      <Row>
                         <C.SignUpFormField  name='email'
                                 id='email'
                                 type='text'
@@ -73,7 +74,8 @@ const dispatch = useDispatch();
                                 onChange={handleChange}
                                 isValid={touched.email && !errors.email}
                                 isInvalid={touched.email && !!errors.email}
-                                 placeholder="Digite um e-mail válido"/>
+                                 placeholder="Digite um e-mail válido"/> </Row>
+                               <Row>
                         <C.SignUpFormField   name='nickname'
                                 id='nickname'
                                 type='text'
@@ -81,7 +83,8 @@ const dispatch = useDispatch();
                                 onChange={handleChange}
                                 isValid={touched.nickname && !errors.nickname}
                                 isInvalid={touched.nickname && !!errors.nickname}
-                                 placeholder="Crie seu nick da plataforma"/>
+                                 placeholder="Crie seu nick da plataforma"/></Row>
+                                 <Row>
                         <C.SignUpFormField name='password'
                                 id='senha'
                                 type='password'
@@ -89,7 +92,8 @@ const dispatch = useDispatch();
                                         onChange={handleChange}
                                         isValid={touched.password && !errors.password}
                                         isInvalid={touched.password && !!errors.password}
-                               placeholder="Crie sua senha"/>
+                               placeholder="Crie sua senha"/></Row>
+                               <Row>
                         <C.SignUpFormField  name='confirmaSenha'
                                 id='confirma-senha'
                                 type='password'
@@ -97,39 +101,38 @@ const dispatch = useDispatch();
                                 value={values.confirmaSenha}
                                 onChange={handleChange}
                                 isValid={touched.confirmaSenha && !errors.confirmaSenha}
-                                isInvalid={touched.confirmaSenha && !!errors.confirmaSenha}/>
+                                isInvalid={touched.confirmaSenha && !!errors.confirmaSenha}/></Row>
                      
 
                      
-                       
+                    <Row>
                         <C.SignUpFormField id='nome'
                          type='text'
                           value={values.nome}
                           placeholder="Nome completo"
                           onChange={handleChange}
                           isValid={touched.nome && !errors.nome}
-                          isInvalid={touched.nome && !errors.nome}/>
+                          isInvalid={touched.nome && !errors.nome}/></Row>
                           <Row>
-                        <C.SignUpFormField width= {230}placeholder="Cidade"
+                        <C.SignUpFormField width= {220}placeholder="Cidade"
                         id='cidade' type='text' value={values.cidade}
                         onChange={handleChange}
                         isValid={touched.cidade && !errors.cidade}
                         isInvalid={touched.cidade && !errors.cidade}/>
-                        <C.SignUpFormField width={150} placeholder="UF"
+                        <C.SignUpFormField width={170} placeholder="UF"
                         id='uf' type='text' value={values.uf} onChange={handleChange}
                         isValid={touched.uf && !errors.uf}
                         isInvalid={touched.uf && !errors.uf}/> </Row>
                         <Row>
-                        <C.SignUpFormField width={150} placeholder="Gênero" type="select"
+                        <C.SignUpFormField width={170} placeholder="Gênero" type="select"
                         id='genero' value={values.genero} onChange={handleChange}
                         isValid={touched.genero && !errors.genero}
                         isInvalid={touched.genero && !errors.genero}/> 
-                        <C.SignUpFormField width={230} placeholder="Ano de nascimento"
+                        <C.SignUpFormField width={220} placeholder="Ano de nascimento"
                         id='nascimento' type='date' value={values.nascimento} onChange={handleChange}
                         isValid={touched.nascimento && !errors.nascimento}
                         isInvalid={touched.nascimento && !errors.nascimento}/>
-                        </Row>
-                        
+                        </Row> 
                         </Col>
                         <C.SubmitButton type="submit"><C.StyledArrow src={submit}/></C.SubmitButton> 
                 </C.SignUpForm>

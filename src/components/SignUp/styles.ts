@@ -17,18 +17,20 @@ height: 100vh;
 export const Container = styled.div`
 display: flex;
 justify-content: center;
-text-align: center;
-align-items: center;
+// text-align: center;
+// align-items: center;
 // max-width: 700px;
-    min-height: 500px;
+ //  min-height: 500px;
     border-radius: 15px;
 `
 
 export const SignUpForm = styled(Form)`
+text-align: center;
+align-items: center;
 margin-top: 20px;
 color: #008299;
-align-items: center;
- width: 30rem;
+// align-items: center;
+//  width: 30rem;
 font-family: 'Krub';
 
 
@@ -38,10 +40,11 @@ export const SignUpFormField = styled(Form.Control)`
     font-size: 13px;
     color:#008299;
     border-radius: 25px;
-    width:  ${props =>  props.width ? `${props.width}px` : '25rem'};
+    width:  ${props =>  props.width ? `${props.width}px` : '400px'};
     font-family: 'Krub';
     padding: 16px;
-    margin: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
     background:#64E5FB;
     &::placeholder {
        color:#008299;
@@ -52,8 +55,9 @@ export const SignUpFormField = styled(Form.Control)`
 `
 
 export const Title = styled.h1`
-
-padding-top: 10px;
+text-align: center;
+align-items: center;
+padding-top: 30px;
 font-family: 'Krub';
 font-style: normal;
 font-weight: 600;
