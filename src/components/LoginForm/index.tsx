@@ -18,18 +18,17 @@ export const LoginForm = () => {
    const [email, setEmail] = useState<string>("");
    const [password, setPassword] = useState<string>("");
 
-
-
    const handleSubmit = async (event: FormEvent) => {
      event.preventDefault();
     try {
       const response = await signInUser({ email, password });
-
-      window.localStorage.setItem("token", response.data.token);
-      window.localStorage.setItem("id", response.data.id);
+      console.log(response)
+      window.localStorage.setItem("token", response.token);
+     
       dispatch(getUser());
       navigate("/feed")
     } catch (error) {
+        console.log(error)
       alert("Opa! Deu algo errado!");
     }
   };
