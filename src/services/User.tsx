@@ -15,15 +15,18 @@ import { logar, User } from "../@types";
 export const addUser = async (user: User) => {
     const response = await api.post("/user", user)
     console.log(response.data)
-    console.log(response.status)
+    
     return response.data
 }
 
 export const signInUser = async (payload: logar) => {
     try {
-        const response = await api.post("/", payload);
+        const response = await api.post("/login", payload);
         return response.data;
+        console.log(response.data.token)
     } catch (error: any) {
         alert(`Error: ${error.response.data}`);
     }
 };
+
+export const getUser = async
