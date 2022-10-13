@@ -1,5 +1,5 @@
 import { Routes as WapperRoute, Route, BrowserRouter } from 'react-router-dom';
-import LoginForm  from './pages/LoginPage';
+import LoginForm  from './pages/LoginPage/index.';
 import Feed from './pages/Feed'
 import LandingPage from './pages/LandingPage';
 import LandingPageFinal from './pages/LandingPageFinal';
@@ -13,7 +13,7 @@ export default function Routes(): JSX.Element {
     return (
         <BrowserRouter>
             <WapperRoute>
-                <Route path="/" element={<LoginForm />} />
+                <Route path="/login" element={<LoginForm />} />
                 <Route path="/Feed" element={<Feed />} />
                 <Route path="/LandingPage" element={<LandingPage />} />
                 <Route path="/LandingPage/2" element={<LandingPageFinal />} />
