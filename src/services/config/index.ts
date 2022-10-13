@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const baseURL = axios.create({
-    baseURL: "http://localhost:9000",
+    baseURL: "https://cola-ai.herokuapp.com",
     headers: {
         "Content-Type": "application/json",
     }

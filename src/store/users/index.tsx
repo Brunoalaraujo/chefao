@@ -12,31 +12,7 @@ const initialState: UserState = {
     nickname: undefined,
 };
 
- /* const userReduce = createSlice({
-    name: "@user",
-    initialState,
-    reducers: {
-        logIn(state, action) {
-            Object.assign(state, {
-                isLogged: true,
-                accessToken: action.payload.accessToken,
-                permission: Permission[action.payload.permission],
-                id: action.payload.user.id,
-                name: action.payload.user.name,
-                email: action.payload.user.email,
-                
-            });
-        },
-        logOut(state) {
-            Object.assign(state, initialState);
-        },
-    },
-});
-
-export const { logIn, logOut } = userReduce.actions;
-
-export default userReduce.reducer; */
-
+ 
 const userReduce = createSlice({
     name: "user",
     initialState: {
