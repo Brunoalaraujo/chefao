@@ -11,18 +11,21 @@ export interface logar {
     password: string;
 }
 
-export interface User extends logar {
-    id: number;
-    nome: string;
-    permission: Permission;
-    estado: string,
-    cidade: string,
-    endereco: string,
-    numero: string,
-    cep: string,
-    bairro: string,
-    complemento: string,
+export interface User  {
+  //  id: number;
+   
+  name: string;
+  nickname: string;
+  email: string;
+  password: string;
+  gender: string;
+ // role: string;
+  address: IAddress;
 }
+export interface IAddress {
+    city: string;
+    state: string;
+  }
 
 export enum Permission {
     "Nothing",

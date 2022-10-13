@@ -1,15 +1,23 @@
-import { baseUrl as api } from "./config";
+import { baseURL as api } from "./config";
 import { logar, User } from "../@types";
 
 
-export const addUser = async (user: Omit<User, "id">) => {
+/*  export const addUser = async (user: <User>) => {
     try {
-        const response = await api.post("/users", user);
+        const response = await api.post("/user", user);
+        console.log(response.data)
         return response.data;
     } catch (error) {
         throw new Error("Não foi possível enviar o formulário");
     }
 };
+*/
+export const addUser = async (user: User) => {
+    const response = await api.post("/user", user)
+    console.log(response.data)
+    console.log(response.status)
+    return response.data
+}
 
 export const signInUser = async (payload: logar) => {
     try {
