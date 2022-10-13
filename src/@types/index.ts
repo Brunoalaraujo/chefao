@@ -40,8 +40,8 @@ export interface UserState {
     id?: number;
     nome?: string;
     email?: string;
-    cidade: string,
-    estado: string
+    nickname?: string;
+    
     
     
 }

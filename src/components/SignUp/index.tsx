@@ -19,9 +19,6 @@ export const SignUp = () => {
     const [gender, setGender] = useState<string>("");
    // const [nascimento, setNascimento] = useState<string>("");
     
-
-
-
     const handleSubmit = async (event: FormEvent) => {
       event.preventDefault();
 
@@ -94,9 +91,7 @@ export const SignUp = () => {
                                // value={confirmarSenha}
                               //  onChange={(event) => setConfirmarSenha(event.target.value)}
                               /></Row>
-                     
-
-                     
+            
                     <Row>
                         <C.SignUpFormField id='name'
                          type='text'

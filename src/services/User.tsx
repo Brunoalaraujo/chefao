@@ -22,11 +22,18 @@ export const addUser = async (user: User) => {
 export const signInUser = async (payload: logar) => {
     try {
         const response = await api.post("/login", payload);
-        return response.data;
+        console.log(response.data)
+        console.log(response.status)
         console.log(response.data.token)
+        return response.data;
+        
     } catch (error: any) {
         alert(`Error: ${error.response.data}`);
     }
 };
 
-export const getUser = async
+export const getUserById = (id: string | null, token: string | null)  => {
+    return api.get(`user/${id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+  }

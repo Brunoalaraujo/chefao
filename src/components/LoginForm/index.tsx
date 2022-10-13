@@ -1,19 +1,18 @@
 import React from 'react';
 import { useState, FormEvent} from 'react';
-import { ErrorMessage, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import { useNavigate, Link } from "react-router-dom";
 import { signInUser } from '../../services/User';
-import { logIn } from '../../store/users';
-
+import { getUser } from '../../store/users';
+import { Dispatch } from "@reduxjs/toolkit";
 
 
 import * as S from './style';
 import logo from '../../assets/images/Group 9.svg';
 
-const FormLogin: React.FC = () => { 
+export const LoginForm = () => { 
 
-    const dispatch = useDispatch();
+    const dispatch: Dispatch<any> = useDispatch();
     const navigate = useNavigate();
 
    const [email, setEmail] = useState<string>("");
@@ -22,15 +21,14 @@ const FormLogin: React.FC = () => {
 
 
    const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
+     event.preventDefault();
     try {
       const response = await signInUser({ email, password });
 
       window.localStorage.setItem("token", response.data.token);
       window.localStorage.setItem("id", response.data.id);
       dispatch(getUser());
-
-      navigate("/");
+      navigate("/feed")
     } catch (error) {
       alert("Opa! Deu algo errado!");
     }
@@ -39,10 +37,6 @@ const FormLogin: React.FC = () => {
     return (
         <S.Container1>
             <img className='img-fluid' src={logo} />
-         
-             
-                     
-               
                     <S.Container>
                             
                         <S.LoginForm className='m-2' onSubmit={handleSubmit}>
@@ -54,10 +48,10 @@ const FormLogin: React.FC = () => {
                                     type='text'
                                     placeholder='email'
                                     value={email}
-                                    onChange={handleChange}
+                                    onChange={(e) => setEmail(e.target.value)}
                                    
                                 />
-                                <ErrorMessage name='email' component={S.StyledErrorMessage} />
+            
                             </S.LoginFormGroup>
                             <S.LoginFormGroup>
                                 <S.LoginFormInput
@@ -66,10 +60,10 @@ const FormLogin: React.FC = () => {
                                     type='password'
                                     placeholder='senha'
                                     value={password}
-                                    onChange={handleChange}
+                                    onChange={(e) => setPassword(e.target.value)}
                                     
                                 />
-                                <ErrorMessage name='password' component={S.StyledErrorMessage} />
+                    
                             </S.LoginFormGroup>
                             <S.StyledButton size='sm' type='submit'>Confirmar</S.StyledButton>
                             <S.ButtonStyledTransparent size='sm' type='submit'><Link to={"/signup"}/>Criar minha conta</S.ButtonStyledTransparent>
@@ -83,4 +77,3 @@ const FormLogin: React.FC = () => {
         </S.Container1> 
  )}
 
-export default FormLogin;
