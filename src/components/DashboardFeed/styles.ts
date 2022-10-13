@@ -18,7 +18,7 @@ export const Container = styled.div`
 `;
 export const Title = styled.h1`
     color: #000;
-    align-items: center
+    align-items: center;
     
 
     font-size: 2.5rem;
