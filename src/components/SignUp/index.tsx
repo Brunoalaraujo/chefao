@@ -36,12 +36,21 @@ export const SignUp = () => {
     try {
       const response = await addUser(payload);
       if (response.status !== 201) {
-        return alert("Ocorreu um erro!");
+        alert("Cadastro efetuado com sucesso!");
       }
-      alert("Cadastro efetuado com sucesso!");
     } catch (error) {
-      alert("Ocorreu um erro!");
-    }
+      alert("Erro ao cadastrar usuário!");
+    } 
+  //   finally {
+  //     setName("");
+  //     setEmail("");
+  //     setPassword("");
+  //     setNickname("");
+  //     setCity("");
+  //     setState("");
+  //     setGender("");
+  //     setBirthDate("");
+  // }
   };
 
   return (
@@ -161,4 +170,5 @@ export const SignUp = () => {
       </C.Container>
     </C.Wrapper>
   );
-};
+}
+

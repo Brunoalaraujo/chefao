@@ -5,14 +5,14 @@ import { Button } from 'react-bootstrap';
 export const Container = styled.div`
   display: flex;
   img {
-    height: 101vh;
+    height: 100vh;
     width: 100vw;    
   };
 `;
 
 export const Aside = styled.div`
-  width: 30%;
-  margin-left: 63%;
+  width: 32%;
+  margin-left: 58%;
   position: absolute;
   text-align: center;
   
@@ -26,11 +26,11 @@ export const Aside = styled.div`
 export const Title = styled.h1`
 flex-wrap: wrap;
 text-align: start;
-padding-top: 3rem;
+margin-top: 30%;
 
 color: #FFF;
 font-weight: 500;
-font-size: 2.5rem;
+font-size: 3.5rem;
 font-family: 'Krub';
 
 @media (max-width: 768px) {
@@ -47,6 +47,10 @@ font-family: 'Krub';
       margin-left: -3%;
   };
 `;
+
+export const Div = styled.div`
+  margin-top: 30%;
+`
 
 export const StyledButton = styled(Button)`
   border: none;
@@ -112,7 +116,7 @@ export const SignupButton = styled(Button)`
   font-size: 1.3rem;
   border-radius: 64px;
   padding: 0.7rem 0; 
-  margin: 0;
+  margin-bottom: 5rem;
   a {
     text-decoration: none;
     color: #fff;

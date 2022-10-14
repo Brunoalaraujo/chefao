@@ -44,6 +44,11 @@
     background-color: #a520ac;
 }
 
+.NextStep{
+    z-index: 3;
+    margin-top: 55vh;
+}
+
 @media screen and (max-width: 769px) {
     .carousel-control-prev,
     .carousel-control-next {
