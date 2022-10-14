@@ -4,14 +4,16 @@ import DashboardFeed from "../../components/DashboardFeed";
 import BtnLink from "../../components/BtnLink";
 import {Footer} from "../../components/Footer"
 
+import "./styles.scss"
+
 const Dashboard: React.FC = () => {
   return (
     <>
       <Header />
       <DashboardFeed />
       <Footer>
-        <BtnLink redirect="/login">Cadastra </BtnLink>
-        <BtnLink redirect="/login">Cadastra </BtnLink>
+        <BtnLink class="btnCadastro" redirect="/login">Cadastrar</BtnLink>
+        <BtnLink class="btnLogin" redirect="/login">Cadastrar</BtnLink>
       </Footer>
     </>
   );

@@ -6,8 +6,4 @@ export const Footer = styled.div`
     width: 50%;
     margin: auto;
     padding: 2rem;
-
-    a {
-        color: red;
-    }
 `
