@@ -1130,7 +1130,7 @@ property-expr@^2.0.4:
 
 react-avatar@^5.0.3:
   version "5.0.3"
-  resolved "https://registry.npmjs.org/react-avatar/-/react-avatar-5.0.3.tgz"
+  resolved "https://registry.yarnpkg.com/react-avatar/-/react-avatar-5.0.3.tgz#42c6b7dc992a2e73fe83c0a1c2ceeac4c7bfae21"
   integrity sha512-DNc+qkWH9QehSEZqHBhqpXWsPY+rU9W7kD68QFHfu8Atfsvx/3ML0DzAePgTUd96nCXQQ3KZMcC3LKYT8FiBIg==
   dependencies:
     is-retina "^1.0.3"
@@ -1210,7 +1210,7 @@ react-lifecycles-compat@^3.0.4:
 
 react-redux@^8.0.4:
   version "8.0.4"
-  resolved "https://registry.npmjs.org/react-redux/-/react-redux-8.0.4.tgz"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.0.4.tgz#80c31dffa8af9526967c4267022ae1525ff0e36a"
   integrity sha512-yMfQ7mX6bWuicz2fids6cR1YT59VTuT8MKyyE310wJQlINKENCeT1UcPdEiX6znI5tF8zXyJ/VYvDgeGuaaNwQ==
   dependencies:
     "@babel/runtime" "^7.12.1"

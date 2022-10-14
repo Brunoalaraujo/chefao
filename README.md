@@ -63,3 +63,7 @@ Os seguintes participantes colaboraram na construção do projeto:
 **Back:
 - [Pedro Fontes](https://github.com/pedrofnts)
 - [Jonas Augusto](https://github.com/jonasaugust1)
+
+### Preview
+
+https://cola-ai.vercel.app/
