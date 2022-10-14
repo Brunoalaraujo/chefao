@@ -14,7 +14,7 @@ export default function Routes(): JSX.Element {
         <BrowserRouter>
             <WapperRoute>
                 <Route path="/login" element={<LoginPage />} />
-                <Route path="/Feed" element={<Feed />} />
+                <Route path="/" element={<Feed />} />
                 <Route path="/LandingPage" element={<LandingPage />} />
                 <Route path="/LandingPage/2" element={<LandingPageFinal />} />
                 <Route path="/signup" element={<SignUpPage />} />
