@@ -2,8 +2,7 @@ import React from "react";
 import { Navbar, Container } from "react-bootstrap";
 import { RootStore } from "../../store";
 import { useSelector, useDispatch } from "react-redux";
-import { logOut } from "../../store/users";
-import Avatar from 'react-avatar';
+import  Avatar from 'react-avatar';
 
 import logoformatada from "../../assets/images/logoformatada.png";
 import addphoto from "../../assets/images/addphoto.png"
@@ -11,11 +10,8 @@ import addphoto from "../../assets/images/addphoto.png"
 import * as colaiNav from "./style";
 
 const NavbarColai = () => {
-  const dispatch = useDispatch();
-  const userLogout = () => {
-    dispatch(logOut());
-  };
-  const user = useSelector((store: RootStore) => store.usersSlice);
+ 
+  const user = useSelector((store: RootStore) => store.userReduce);
 
   return (
     <colaiNav.StyledNavbar>
