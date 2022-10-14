@@ -36,10 +36,10 @@ $ git clone <https://github.com/pedrogoncaalves/chefao>
 # Acesse a pasta do projeto no terminal/cmd
 
 # Instale as dependências
-$ npm install ou yarn add .
+$ yarn add 
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run dev ou yarn dev
+$ yarn dev
 
 ### 🛠 Tecnologias
 
@@ -51,5 +51,15 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Redux](https://redux.js.org/)
 - [Typescript](https://www.typescriptlang.org/)
 
+### Grupo
 
+Os seguintes participantes colaboraram na construção do projeto:
 
+**Front:
+- [Bruno Araújo](https://github.com/Brunoalaraujo)
+- [Pedro Gonçalves](https://github.com/pedrogoncaalves)
+- [Silvan Miller](https://github.com/SilvanMiller)
+
+**Back:
+- [Pedro Fontes](https://github.com/pedrofnts)
+- [Jonas Augusto](https://github.com/jonasaugust1)
