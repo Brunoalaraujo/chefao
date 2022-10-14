@@ -26,7 +26,7 @@ export const LoginForm = () => {
       window.localStorage.setItem("token", response.token);
      
       dispatch(getUser());
-      navigate("/feed")
+      navigate("/")
     } catch (error) {
         console.log(error)
       alert("Opa! Deu algo errado!");
@@ -47,7 +47,7 @@ export const LoginForm = () => {
                                     type='text'
                                     placeholder='email'
                                     value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                                    
                                 />
             
@@ -59,7 +59,7 @@ export const LoginForm = () => {
                                     type='password'
                                     placeholder='senha'
                                     value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                                     
                                 />
                     

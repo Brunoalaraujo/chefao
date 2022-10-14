@@ -12,8 +12,8 @@ const Dashboard: React.FC = () => {
       <Header />
       <DashboardFeed />
       <Footer>
-        <BtnLink class="btnCadastro" redirect="/login">Cadastrar</BtnLink>
-        <BtnLink class="btnLogin" redirect="/login">Cadastrar</BtnLink>
+        <BtnLink class="btnCadastro" redirect="/login">Quero me Cadastrar</BtnLink>
+        <BtnLink class="btnLogin" redirect="/login">Login</BtnLink>
       </Footer>
     </>
   );
