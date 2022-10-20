@@ -7,6 +7,8 @@ export const baseURL = axios.create({
     }
 });
 
+  
+  export default baseURL;
 
 
 // export default baseUrl

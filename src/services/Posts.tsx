@@ -1,11 +1,21 @@
 import { baseURL as api } from "./config";
-import { Post, User } from "../@types";
+import { IPost, User } from "../@types";
 
-export const renderPosts = (): Promise<Post[]> => {
-    return api.get<Post[]>("/posts").then((response) => response.data);
-};
+ /* export const renderPosts = async (): Promise<IPost[]> => {
+    return api.get<IPost[]>("/feed").then((response) => response.data);
+}; */ 
 
-export const addMessage = async (post: Omit<Post, "id">) => {
+export const renderPosts = async (token: string) => {
+    const response = await api.get("/feed", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data.posts
+  }
+  
+
+export const addMessage = async (post: Omit<IPost, "id">) => {
     try {
         const response = await api.post("/posts", post);
         return response.data;
