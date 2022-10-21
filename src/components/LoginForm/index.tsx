@@ -23,10 +23,12 @@ export const LoginForm = () => {
     try {
       const response = await signInUser({ email, password });
       console.log(response)
-      window.localStorage.setItem("token", response.token);
+      window.localStorage.setItem("token", response?.token);
+      window.localStorage.setItem("nickname", response?.nickname)
+      
      
       dispatch(getUser());
-      navigate("/")
+      navigate("/posts")
     } catch (error) {
         console.log(error)
       alert("Opa! Deu algo errado!");

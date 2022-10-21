@@ -1,11 +1,27 @@
-export interface Post {
+/* export interface Post {
     id: number;
     user_id: number;
     nome: string;
     email: string;
     comentario: string;
 }
-
+*/
+export interface IPost {
+    description: string;
+    assets: IAssets;
+    user: string;
+  }
+  
+  export interface IAssets {
+    offer: Array<string>;
+    want: Array<string>;
+  }
+  
+  export interface PostDocument extends IPost, Document {
+    _doc: { [x: string]: unknown; password: unknown };
+    updatedAt: Date;
+    createdAt: Date;
+  }
 export interface logar {
     email: string;
     password: string;
@@ -47,5 +63,5 @@ export interface UserState {
 }
 
 export interface PostState {
-    post: Post[];
+    post: IPost[];
 }
