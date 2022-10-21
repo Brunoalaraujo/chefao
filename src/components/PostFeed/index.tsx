@@ -2,22 +2,23 @@ import * as C from './styles';
 import  Header  from '../Header'
 import  Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import {  IPost } from '../../@types'
+
 import { renderPosts } from '../../services/Posts'
 import { useEffect, useState } from 'react';
 import { getDefaultMiddleware } from '@reduxjs/toolkit';
+import { IPost } from '../../@types';
 
 
-type Post = {
+ /* type Post = {
     
     album: string;
     assets: object;
     nickname: string;
-}
+} */
 
 export const PostFeed = () => {
 
-    const [posts, setPosts] = useState<Post[]>([]);
+    const [posts, setPosts] = useState<IPost[]>([]);
     useEffect(()=>{
         const getData = async () => {
             try {
