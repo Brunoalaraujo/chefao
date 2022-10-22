@@ -9,7 +9,6 @@ export const SignUp = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const [role] = useState<string>("user");
   const [nickname, setNickname] = useState<string>("");
   const [city, setCity] = useState<string>("");
   const [state, setState] = useState<string>("");
@@ -23,7 +22,6 @@ export const SignUp = () => {
       name,
       email,
       password,
-      role,
       nickname,
       address: {
         city,
@@ -39,7 +37,16 @@ export const SignUp = () => {
       }
     } catch (error) {
       alert("Erro ao cadastrar usuário!");
-    } 
+    } finally {
+      setName("");
+      setEmail("");
+      setPassword("");
+      setNickname("");
+      setCity("");
+      setState("");
+      setGender("");
+      setBirthDate("");
+  }
   };
 
   return (
@@ -142,7 +149,7 @@ export const SignUp = () => {
               <C.SignUpFormField
                 width={220}
                 placeholder="Ano de nascimento"
-                type="text"
+                type="date"
                 id="birthDate"
                 value={birthDate}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
