@@ -36,7 +36,7 @@ font-family: 'Krub';
 
 `
 export const SignUpFormField = styled(Form.Control)`
-    border: 0.1px solid #47E3FF;
+    border: 1px solid #00adcc;
     font-size: 13px;
     color:#008299;
     border-radius: 25px;
