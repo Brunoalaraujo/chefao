@@ -32,7 +32,6 @@ export const SignUp = () => {
       gender,
       birthDate,
     };
-    console.log(payload)
     try {
       const response = await addUser(payload);
       if (response.status !== 201) {
@@ -41,16 +40,6 @@ export const SignUp = () => {
     } catch (error) {
       alert("Erro ao cadastrar usuário!");
     } 
-  //   finally {
-  //     setName("");
-  //     setEmail("");
-  //     setPassword("");
-  //     setNickname("");
-  //     setCity("");
-  //     setState("");
-  //     setGender("");
-  //     setBirthDate("");
-  // }
   };
 
   return (
@@ -67,11 +56,10 @@ export const SignUp = () => {
                 type="text"
                 value={email}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                  setEmail(event.target.value)
-                }
-                placeholder="Digite um e-mail válido"
-              />{" "}
+                  setEmail(event.target.value)}
+                placeholder="Digite um e-mail válido"/>{" "}
             </Row>
+
             <Row>
               <C.SignUpFormField
                 name="nickname"
@@ -79,11 +67,10 @@ export const SignUp = () => {
                 type="text"
                 value={nickname}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                  setNickname(event.target.value)
-                }
-                placeholder="Crie seu nick da plataforma"
-              />
+                  setNickname(event.target.value)}
+                placeholder="Crie seu nick da plataforma"/>
             </Row>
+            
             <Row>
               <C.SignUpFormField
                 name="password"
@@ -91,11 +78,10 @@ export const SignUp = () => {
                 type="password"
                 value={password}
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                  setPassword(event.target.value)
-                }
-                placeholder="Crie sua senha"
-              />
+                  setPassword(event.target.value)}
+                placeholder="Crie sua senha"/>
             </Row>
+
             <Row>
               <C.SignUpFormField
                 name="confirmaSenha"
@@ -103,7 +89,7 @@ export const SignUp = () => {
                 type="password"
                 placeholder="Confirmar senha"
                 // value={confirmarSenha}
-                //  onChange={(event) => setConfirmarSenha(event.target.value)}
+              // onChange={(event) => setConfirmarSenha(event.target.value)}
               />
             </Row>
 
@@ -118,6 +104,7 @@ export const SignUp = () => {
                 }
               />
             </Row>
+
             <Row>
               <C.SignUpFormField
                 width={220}
@@ -140,6 +127,7 @@ export const SignUp = () => {
                 }
               />{" "}
             </Row>
+            
             <Row>
               <C.SignUpFormField
                 width={170}

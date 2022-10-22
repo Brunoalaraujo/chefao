@@ -1,15 +1,8 @@
-/* export interface Post {
-    id: number;
-    user_id: number;
-    nome: string;
-    email: string;
-    comentario: string;
-}
-*/
-export interface IPost {
-    description: string;
+export interface Post {
+    user: User;
     assets: IAssets;
-    user: string;
+    description: string;
+    accessTk: UserState;
   }
   
   export interface IAssets {
@@ -17,11 +10,13 @@ export interface IPost {
     want: Array<string>;
   }
   
-  export interface PostDocument extends IPost, Document {
+  export interface PostDocument extends Post, Document {
     _doc: { [x: string]: unknown; password: unknown };
     updatedAt: Date;
     createdAt: Date;
   }
+  
+
 export interface logar {
     email: string;
     password: string;
@@ -29,7 +24,6 @@ export interface logar {
 
 export interface User  {
   //  id: number;
-   
   name: string;
   nickname: string;
   email: string;
@@ -46,7 +40,7 @@ export interface IAddress {
 export enum Permission {
     "Nothing",
     "User",
-    "Admin",
+
 }
 
 export interface UserState {
@@ -57,11 +51,8 @@ export interface UserState {
     nome?: string;
     email?: string;
     nickname?: string;
-    
-    
-    
 }
 
 export interface PostState {
-    post: IPost[];
+    post: Post[];
 }

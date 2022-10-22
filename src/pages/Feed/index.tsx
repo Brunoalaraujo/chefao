@@ -6,11 +6,13 @@ import { Footer } from "../../components/Footer";
 
 import "./styles.scss";
 
+
 const Dashboard: React.FC = () => {
   return (
     <>
       <Header />
       <DashboardFeed />
+      
       <Footer>
         <BtnLink class="btnCadastro" redirect="/landingpage">
           Quero me Cadastrar

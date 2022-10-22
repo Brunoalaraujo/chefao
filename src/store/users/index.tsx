@@ -86,7 +86,6 @@ export default userReduce.reducer;
           id: response.data._id,
           name: response.data.name,
           email: response.data.email,
-          
         })
       );
     } catch (error) {
