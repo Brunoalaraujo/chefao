@@ -60,7 +60,7 @@ Os seguintes participantes colaboraram na construção do projeto:
 - [Pedro Gonçalves](https://github.com/pedrogoncaalves)
 - [Silvan Miller](https://github.com/SilvanMiller)
 
-** Back:
+**Back:
 - [Pedro Fontes](https://github.com/pedrofnts)
 - [Jonas Augusto](https://github.com/jonasaugust1)
 
