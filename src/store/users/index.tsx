@@ -15,9 +15,7 @@ const initialState: UserState = {
  
 const userReduce = createSlice({
     name: "user",
-    initialState: {
-      isLogged: false,
-    } as UserState,
+    initialState,
     reducers: {
       getRequestUser(state) {
         Object.assign(state, {

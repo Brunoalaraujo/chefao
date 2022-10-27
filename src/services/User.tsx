@@ -1,14 +1,14 @@
-import { baseURL as api } from "./config";
+import  baseURL  from "./config";
 import { logar, User } from "../@types";
 
 export const addUser = async (user: User) => {
-    const response = await api.post("/user", user)
+    const response = await baseURL.post("/user", user)
     return response.data
 }
 
 export const signInUser = async (payload: logar) => {
     try {
-        const response = await api.post("/login", payload);
+        const response = await baseURL.post("/login", payload);
         return response.data;
         
     } catch (error: any) {
@@ -16,8 +16,8 @@ export const signInUser = async (payload: logar) => {
     }
 };
 
-export const getUserById = (id: string , token: string ) => {
-    return api.get(`user/${id}`, {
+export const getUserById = (id: string | null , token: string | null) => {
+    return baseURL.get(`user/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
   }

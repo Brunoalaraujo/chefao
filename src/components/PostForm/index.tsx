@@ -1,41 +1,43 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { FormEvent, useState } from "react";
+import { novoPost } from "../../services/Post";
 
-function BasicExample() {
+function NewPost() {
   const [description, setDescription] = useState<string>("");
   const [offer, setOffer] = useState<string>("");
   const [want, setWant] = useState<string>("");
+  const token = window.localStorage.getItem("token");
+  
+
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-
+    
+    
     const payload = {
       description,
-      offer,
-      want,
+      assets: {
+        offer,
+        want,
+      },
+      token
     };
     console.log(payload);
-  };
 
-  //   try {
-  //     const response = await addUser(payload);
-  //     if (response.status !== 201) {
-  //       alert("Cadastro efetuado com sucesso!");
-  //     }
-  //   } catch (error) {
-  //     alert("Erro ao cadastrar usuário!");
-  //   } finally {
-  //     setName("");
-  //     setEmail("");
-  //     setPassword("");
-  //     setNickname("");
-  //     setCity("");
-  //     setState("");
-  //     setGender("");
-  //     setBirthDate("");
-  // }
-  // };
+    try {
+      const response = await novoPost(payload);
+
+      if (response.status !== 201) {
+        return alert("Deu algo errado");
+      }
+
+      alert("Post efetuado com sucesso");
+    } catch (error) {
+      console.log(error);
+      alert("Operação falhou");
+    }
+  };
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -80,4 +82,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default NewPost;

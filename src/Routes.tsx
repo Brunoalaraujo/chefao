@@ -5,8 +5,7 @@ import LandingPage from './pages/LandingPage';
 import LandingPageFinal from './pages/LandingPageFinal';
 import TourPage from './pages/TourPage'
 import { PostFeedPage } from './pages/PostFeed';
-import { NewPost } from './pages/NewPost';
-
+import NewPost from './components/PostForm';
 import  {SignUpPage}  from './pages/SignUpPage';
 
 
